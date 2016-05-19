@@ -3,7 +3,7 @@
 /*
 Theme Name: Spring 2016 Demo
 Author: Testy McPickles
-Author URI: http://www.premiumdw.com
+Author URI: http://www.testymcpickles.com
 Description: I hope Bri is doing her homework. You too, Paige.
 Version: 0.0.0812
 */
@@ -29,23 +29,23 @@ function my_subnavigation() {
 		
 			echo '<h2>'.get_the_title($post->post_parent).'</h2>';
 			echo '<ul>';
-			wp_list_pages(array('title_li' => '', 'child_of' => $post->post_parent,)); // do this
+			wp_list_pages(array('title_li' => '', 'child_of' => $post->post_parent,)); // list the children of the page's parent
 			echo '</ul>';
 		
-		} else { // does not have a parent
+		} else { // if the page we're on does not have a parent
 			
 			echo '<h2>'.get_the_title($post->ID).'</h2>';
 			echo '<ul>';
-			wp_list_pages(array('title_li' => '', 'child_of' => $post->ID,)); // do this
+			wp_list_pages(array('title_li' => '', 'child_of' => $post->ID,)); // list the children of the page
 			echo '</ul>';
 			
 		}
 		
-	} else { // if we're not in pages and in postings
+	} else { // if we're not in pages
 		
 		echo '<h2>Blog</h2>';
 		echo '<ul>';
-		wp_list_categories(array('title_li' => '',));
+		wp_list_categories(array('title_li' => '',)); // list the categories of the postings
 		echo '</ul>';
 		
 	}	
