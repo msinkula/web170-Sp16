@@ -15,6 +15,9 @@ register_nav_menus(array(
 ));
 //
 
+// Register My Sidebars
+register_sidebars(3,array());
+//
 
 // Make me some thumbnails, please.
 add_theme_support('post-thumbnails');
@@ -22,6 +25,8 @@ add_theme_support('post-thumbnails');
 
 // My Sub Navigation
 function my_subnavigation() {
+	
+	global $post; // don't forget this... this is why id didn't work in class 
 
 	if (is_page()) { // if we're in pages
 		

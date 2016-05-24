@@ -34,6 +34,5 @@
         </section>
     </div>
     <!-- End Widgets -->
-    
 
 <?php get_footer(); ?>
