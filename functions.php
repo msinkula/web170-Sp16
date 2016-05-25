@@ -16,7 +16,7 @@ register_nav_menus(array(
 //
 
 // Register My Sidebars
-register_sidebar(array('before_widget' => '<div id="%1$s" class="widget %2$s">', 'after_widget' => '</div>',));
+register_sidebars(3, array('before_widget' => '<div id="%1$s" class="widget %2$s">', 'after_widget' => '</div>',));
 //
 
 // Make me some thumbnails, please.
